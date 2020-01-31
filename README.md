@@ -3,6 +3,30 @@ Nvidia Jetson Nano controlled car with camera
 
 This project at AISVN helps with machine learning, object detection, inference, computer vision (OpenCV) and artificial intelligence. It uses the 128 CUDA cores of the Nvidia Jetson Nano.
 
-Base is this car model unit from [hshop.vn](https://hshop.vn/products/khung-xe-robot-kim-loai-racing-car-1)
+## Hardware
+
+Base is this car model unit from [hshop.vn](https://hshop.vn/products/khung-xe-robot-kim-loai-racing-car-1) for 790.000 VND.
+
+Alternative: [Similar designs](https://tae.vn/khung-robot-do-line) from [TAE.VN](https://tae.vn/). Custom aluminum CNC design available after TET 2020:
 
 ![car unit base](pic/car_base.jpg)
+
+![base tae vn](pic/car_tae.vn.jpg)
+
+## Machine learning and TensorFlow
+
+<img scr="pic/TensorFlowLogo.svg" width="150" align="right">
+
+For whatever reason Google deceided to base their hardware acceleration for [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow), [Keras](https://en.wikipedia.org/wiki/Keras) and [cuDNN](https://developer.nvidia.com/cudnn) on [CUDA](https://en.wikipedia.org/wiki/CUDA) - for many other deep-learning software projects this is [an important feature](https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software). So we look for a GPU with CUDA cores. It happens to be that I have several, but not all are suitable:
+
+|     GPU name    | CUDA cores | Compute Capability | at           |
+|:---------------:|-----------:|:------------------:|--------------|
+| Quadro NVS 140M |         16 |         1.1        | Thinkpad T61 |
+| Quadro FX580    |         32 |         1.1        | hp Z600      |
+| GTX 650         |        384 |         3.0        | hp Z600      |
+| Jetson Nano     |        128 |         5.3        |              |
+| GT750M          |        384 |         3.0        | MBPr15 2014  |
+| M1000M          |        512 |         5.0        | Zbook 15 G3  |
+| GTX960          |       1024 |         5.2        | hp Z600      |
+
+Note that to install the Nvidia CUDA driver for tensorflow you need at least a CC (Compute Capability) of 3.5 or if you compile the source for yourself at least 3.0.
