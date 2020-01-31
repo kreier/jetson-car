@@ -15,7 +15,7 @@ Alternative: [Similar designs](https://tae.vn/khung-robot-do-line) from [TAE.VN]
 
 ## Machine learning and TensorFlow
 
-<img scr="pic/TensorFlowLogo.svg" width="150" align="right">
+<img src="pic/TensorFlowLogo.svg" width="150" align="right">
 
 For whatever reason Google deceided to base their hardware acceleration for [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow), [Keras](https://en.wikipedia.org/wiki/Keras) and [cuDNN](https://developer.nvidia.com/cudnn) on [CUDA](https://en.wikipedia.org/wiki/CUDA) - for many other deep-learning software projects this is [an important feature](https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software). So we look for a GPU with CUDA cores. It happens to be that I have several, but not all are suitable:
 
@@ -30,3 +30,7 @@ For whatever reason Google deceided to base their hardware acceleration for [Ten
 | GTX960          |       1024 |         5.2        | hp Z600      |
 
 Note that to install the Nvidia CUDA driver for tensorflow you need at least a CC (Compute Capability) of 3.5 or if you compile the source for yourself at least 3.0.
+
+## Setup
+
+The car has a 7 inch 1024x600 IPS HDMI display, connected to the Jetson Nano and is powered by a 10000 mAh battery pack with two 5V 2A outlets. The wireless netword had to be added and now the Jetson is equipped with a AC8265 card for WiFi5 and Bluetooth 4.2.
