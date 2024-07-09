@@ -79,7 +79,7 @@ It seemed like the combination of object detection and classification was the ma
 
 In early 2024 I finished to assemble the Jetson Nano into the enclosure I purcheased in 2020, together with the Wifi card, antenna and camera. It turns out the [5MP Raspberry Pi camera Rev 1.3](https://www.thegioiic.com/camera-5mp-raspberry-pi) with the OV5647 is not compatible with the Jetson Nano! I have two and can't get them to work. But I have a 720p USB webcam with 90 degrees FOV that should work as well.
 
-![Jetson Nano 2024](jetson_nano_2024.jpg)
+![Jetson Nano 2024](2024_jetson_nano.jpg)
 
 #### TODO
 
