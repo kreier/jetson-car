@@ -10,7 +10,7 @@ Base is this car model unit from [hshop.vn](https://hshop.vn/products/khung-xe-r
 
 Alternative: [Similar designs](https://tae.vn/khung-robot-do-line) from [TAE.VN](https://tae.vn/). Custom aluminum CNC design available after TET 2020:
 
-<img src="pic/car_base.jpg" width=48%> <img src="pic/car_tae.vn.jpg" width=48%>
+<img src="pic/car_base.jpg" width="48%" > <img src="pic/car_tae.vn.jpg" width="48%" >
 
 <!--
 ![car unit base](car_base.jpg)
@@ -58,15 +58,17 @@ The [TED Talk from August 2017](https://www.youtube.com/watch?v=Cgxsv1riJhI) by 
 
 Nvidia had the Jetson TK1 platform already created in 2014, but it was power hungry and expensive. But for just 100 Dollars the Jetson Nano was announced in 2019 to be affordable for student projects with just using 5-10 Watt. We applied for a project at hackster.io. But ultimately we ordered a 4GB development platform at the end of 2019 for student projects.
 
-The drive base from TAE was delayed early 2020 because of the starting COVID-19 pandemic and shipments from China. But eventually we got the drive base. Yet the project stalled from 2020-2024.
+The drive base from TAE was delayed early 2020 because of the starting COVID-19 pandemic and shipments from China. But eventually we got the drive base. Here are the components.
 
 ![Jetson and car](pic/2019_jetson_car.jpg)
 
-#### Challenges of self driving - 2024
+The project stalled from 2020-2024. And a lot happened in the meantime. I got to know the VEX competition and went to the finals in summer 2023 in Dallas. I got to know about VRC and reactivated the robot from [Team 426]() and mount a chair on it for [Reset 2023](https://github.com/ssis-robotics/reset23) exhibition.
+
+### Challenges of self driving - 2024
 
 It seemed like the combination of object detection and classification was the main problem making self-driving cars possible, together with latency. As it turns out, there is much more to do. Additional sensors like LIDAR really help, even Tesla finally gave in. And here are some example videos to show what's possible and what is still challenging:
 
-- [Why self-driving cars have stalled | It's Complicated](https://www.youtube.com/watch?v=4sCK-a33Nkk) by The Guardian September 2022
+- [Why self-driving cars have stalled - It's Complicated](https://www.youtube.com/watch?v=4sCK-a33Nkk) by The Guardian September 2022
 - [I RACED My Self-Driving RC Car](https://www.youtube.com/watch?v=zuyOdaQ2xuw) by Steven Gong in July 2023, taking part in the [F1 tenth](https://f1tenth.org/) race 2023, but they use Jetson Xavier NX from 2020, at least 3x more powerful than the Nano (Volta instead of Maxwell, 21 TOPS since int8 is supported) and with $399 4x more expensive
 - [Sorry. Your Car Will Never Drive You Around.](https://www.youtube.com/watch?v=2DOd4RLNeT4) - from January 2024, self driving cars are 8 times __less__ safe than humans, see data at minute 15 and 11.3 deaths per 100 million miles for Tesla FSD versus 1.35 deaths for humans
 - [Video First AI powered Race - A2RL Abu Dhabi](https://www.youtube.com/watch?v=feTxamTHQAA) - disaster 2024-04-28 [https://a2rl.io/](https://a2rl.io/)
