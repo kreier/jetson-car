@@ -1,10 +1,8 @@
 # Autonomous car powered by Nvidia Jetson Nano
 
-Nvidia Jetson Nano controlled car with camera
+A project started in 2019 at AISVN: Nvidia Jetson Nano controlled car with a camera
 
-This little 1:12 model car is controlled by a Nvidia Jetson nano to drive autonomounsly with object detection.
-
-This project was planned at AISVN at the end of 2019 to help with machine learning, object detection, inference, computer vision (OpenCV) and artificial intelligence. It uses the 128 CUDA cores of the Nvidia Jetson Nano.
+This project was planned at AISVN at the end of 2019 to help with machine learning, object detection, inference, computer vision (OpenCV) and artificial intelligence. It uses the 128 CUDA cores of the Nvidia Jetson Nano. The base is a 1:12 model car.
 
 ## Hardware
 
@@ -31,9 +29,55 @@ For whatever reason Google deceided to base their hardware acceleration for [Ten
 | GT750M          |        384 |         3.0        | MBPr15 2014  |
 | M1000M          |        512 |         5.0        | Zbook 15 G3  |
 | GTX960          |       1024 |         5.2        | hp Z600      |
+| RTX3070 Ti      |       6144 |         8.6        | i3 10100     |
 
 Note that to install the Nvidia CUDA driver for tensorflow you need at least a CC (Compute Capability) of 3.5 or if you compile the source for yourself at least 3.0.
 
 ## Setup
 
 The car has a 7 inch 1024x600 IPS HDMI display, connected to the Jetson Nano and is powered by a 10000 mAh battery pack with two 5V 2A outlets. The wireless netword had to be added and now the Jetson is equipped with a AC8265 card for WiFi5 and Bluetooth 4.2.
+
+## History
+
+### Inspirations and Development
+
+Realtime object detection and classification with edge computing hardware became imaginable in the early 20th century. The changes were really fast. The stages are:
+
+#### Labeled images - 2007 ImageNet
+
+As [Fei Fei Li](https://en.wikipedia.org/wiki/Fei-Fei_Li) explains in her TET talk (link below) they started in 2007 to classify around 1,000,000,000 pictures and used [Amazon Mechanical Turk](https://en.wikipedia.org/wiki/Amazon_Mechanical_Turk) with 48,940 workers in 167 countries to create the image database. By 2009 the database had 15,000,000 labeled images in 22,000 categories. And funding back then was a problem!
+
+#### Classification - 2012 AlexNet
+
+To win the ImageNet 2012 challenge [AlexNet](https://en.wikipedia.org/wiki/AlexNet) used __GPUs__ for its concolutional neural network CNN. Its running on CUDA. This competition ILSVRC started in 2010 and ran until 2017. The creator of ImageNet Fei Fei Li gave an [inspiring TED talk in 2015](https://www.youtube.com/watch?v=40riCqvRoMs). Self driving cars are mentioned at minute 1:30. And how much a three-year old can outperform a computer.
+
+#### Object detection - 2017 YOLO
+
+The [TED Talk from August 2017](https://www.youtube.com/watch?v=Cgxsv1riJhI) by Joseph Redmon from Washington University inspired ideas and possibilities. In his talk he talked about the application for self driving cars. It certainly makes it imaginable, and it was just running on his laptop! A student at [HCMUTE](https://en.wikipedia.org/wiki/Ho_Chi_Minh_City_University_of_Technology_and_Education) used this [YOLO](https://www.youtube.com/watch?v=MPU2HistivI) (You Only Look Once) software with an NVidia graphics card in his master thesis 2018 for an part in developing an autonomous car. But the [GTX 980](https://en.wikipedia.org/wiki/GeForce_900_series) with 2048 CUDA cores need 165 Watt power to work. The power requirement is a challenge for a mobile application.
+
+#### Mobile affordable platform - 2019 Jetson Nano
+
+Nvidia had the Jetson TK1 platform already created in 2014, but it was power hungry and expensive. But for just 100 Dollar the Jetson Nano was announced in 2019 to be affordable for student projects with just using 5-10 Watt. We applied for a project at hackster.io. But ultimately we ordered a 4GB development platfrom at the end of 2019 for student projects.
+
+The drive base from TAE was delayed early 2020 because of the starting COVID-19 pandemic and shipments from China. But eventually we got the drive base. Yet the project stalled from 2020-2024.
+
+#### Challenges of self driving - 2024
+
+It seemed like the combination of object detection and classification was the main problem to get self driving cars possible, together with latency. As it turns out, there is much more to do. Additinal sensors like LIDAR really help, even Tesla finally gave in. And here are some example videos to show whats possible and what is still challenging:
+
+- [Video 1]()
+- [Video 2]()
+
+#### Reactivation of the Jetson Nano Project
+
+In early 2024 I finished to assemble the Jetson Nano into the enclosure I purcheased in 2020, together with the Wifi card, antenna and camera. It turns out the [5MP Raspberry Pi camera Rev 1.3](https://www.thegioiic.com/camera-5mp-raspberry-pi) with the OV5647 is not compatible with the Jetson Nano! I have two and can't get them to work. But I have a 720p USB webcam with 90 degrees FOV that should work as well.
+
+![Jetson Nano 2024](jetson_nano_2024.jpg)
+
+#### TODO
+
+We need to do many things:
+
+- drive base
+- API to communicate
+- base to mount the Jetson Nano, power supply and 7inch screen
