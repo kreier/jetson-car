@@ -1,12 +1,14 @@
 # Autonomous car powered by Nvidia Jetson Nano
 
-This project was planned at AISVN at the end of 2019 to help with machine learning, object detection, inference, computer vision (OpenCV) and artificial intelligence. It uses the 128 CUDA cores of the Nvidia Jetson Nano. The base is a 1:12 model car.
+This project was planned at AISVN at the end of 2019 to help with machine learning, object detection, inference, computer vision (OpenCV) and artificial intelligence. It uses the 128 CUDA cores of the Nvidia Jetson Nano. The base is a [1:18 model car](https://hshop.vn/products/khung-xe-robot-kim-loai-racing-car-1).
 
 ![Jetson and car](pic/2024_jetson_nano.jpg)
 
+In 2021 I got a [144001 from WLtoys](https://quanphongrc.vn/ct/may-bay-dieu-khien/3554/wltoys-144001-1-14-2-4g-4wd-high-speed-racing-rc-car-60km-h-green-red.html) 1:14 car with better chassis, motor and remote control.
+
 ## Hardware
 
-Base is this car model unit from [hshop.vn](https://hshop.vn/products/khung-xe-robot-kim-loai-racing-car-1) for 790.000 VND.
+Base is this car model unit from [hshop.vn](https://hshop.vn/products/khung-xe-robot-kim-loai-racing-car-1) for 790.000 VND. They offer [a complete kit with lidar](https://hshop.vn/products/jetracer-professional-version-ros-ai-kit-lidar-mapping-vision-processing-powered-by-jetson-nano) (but without the Jetson Nano) for 8 million VND or 300 USD.
 
 Alternative: [Similar designs](https://tae.vn/khung-robot-do-line) from [TAE.VN](https://tae.vn/). Custom aluminum CNC design available after TET 2020:
 
@@ -34,7 +36,9 @@ Note that to install the Nvidia CUDA driver for tensorflow you need at least a C
 
 ## Setup
 
-The car has a 7 inch 1024x600 IPS HDMI display, connected to the Jetson Nano and is powered by a 10000 mAh battery pack with two 5V 2A outlets. The wireless network had to be added and now the Jetson is equipped with a AC8265 card for WiFi5 and Bluetooth 4.2. More to come 2024-07-09
+Idea from planning in India end of 2019 included a 7 inch 1024x600 IPS HDMI display, connected to the Jetson Nano and powered by a 10000 mAh battery pack with two 5V 2A outlets. The wireless network had to be added and now the Jetson is equipped with a AC8265 card for WiFi5 and Bluetooth 4.2. Once working the display is probably not needed but via VNC better controlled from a laptop or bigger screen. Insight from July 2024.
+
+More to come 2024-07-09
 
 ## History
 
@@ -75,9 +79,11 @@ It seemed like the combination of object detection and classification was the ma
 
 #### Reactivation of the Jetson Nano Project
 
-In early 2024 I finished assembling the Jetson Nano into the enclosure I purchased in 2020, together with the Wifi card, antenna and camera. It turns out the [5MP Raspberry Pi camera Rev 1.3](https://www.thegioiic.com/camera-5mp-raspberry-pi) with the OV5647 is not compatible with the Jetson Nano! I have two and can't get them to work. But I have a 720p USB webcam with 90 degrees FOV that should work as well.
+In early 2024 I finished assembling the Jetson Nano into the enclosure I purchased in 2020, together with the Wifi card, antenna and camera. It turns out the [5MP Raspberry Pi camera Rev 1.3](https://www.thegioiic.com/camera-5mp-raspberry-pi) with the OV5647 is not compatible with the Jetson Nano! I have two and can't get them to work. But I have a 720p USB webcam with 120 degrees FOV that should work. While you can adjust the focus with the current driver it has only 80 degrees FOV in 720p and causes a buffer overflow and stalling system when connected to USB. A logitech C270 works without these problems.
 
 ![Jetson Nano 2024](pic/2024_jetson_nano.jpg)
+
+Another problem is that updating the software causes incompatibility for the gcc compiler with many errors throwing at you.
 
 #### TODO
 
