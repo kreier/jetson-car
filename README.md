@@ -38,7 +38,8 @@ Note that to install the Nvidia CUDA driver for tensorflow you need at least a C
 
 The planning took place in India at the end of 2019. It includes 7 inch 1024x600 IPS HDMI display, connected to the Jetson Nano and powered by a 10000 mAh battery pack with two 5V 2A outlets. The wireless network had to be added and now the Jetson is equipped with a AC8265 card for WiFi5 and Bluetooth 4.2. The idea with a display originates from several other examples that used a display:
 
-![prototype car Jetson Nano](pic/prototype2022.jpg)
+<!-- ![prototype car Jetson Nano](pic/prototype2022.jpg) -->
+<img src="pic/white10x1.png" width="20%"><img src="pic/prototype2022.jpg" width="60%">
 
 Once the Jetson Nano is up and running the display is probably not nesessary. All connections are wireless and control can be done by ssh or vnc. A [video from 2019 by ExplainingComputers](https://www.youtube.com/watch?v=wKMWjIKaU68) shows this be done from a Jupyter Notebook. The Jetbot looks nice, yet someone had to build it and program it. This saves a lot of time, and still it was rather limited. The "edge detection" for the table top shows how limited the algorithms were at that time. Projected cost: $250.
 
@@ -77,6 +78,7 @@ The project stalled from 2020-2024. And a lot happened in the meantime. I got to
 It seemed like the combination of object detection and classification was the main problem making self-driving cars possible, together with latency. As it turns out, there is much more to do. Additional sensors like LIDAR really help, even Tesla finally gave in. And here are some example videos to show what's possible and what is still challenging:
 
 - [Why self-driving cars have stalled - It's Complicated](https://www.youtube.com/watch?v=4sCK-a33Nkk) by The Guardian September 2022
+- [Lidar vs. Tesla: the race for fully self driving cars](https://www.youtube.com/watch?v=pUtJ8HPZRkw) from June 2023 by the Verge
 - [I RACED My Self-Driving RC Car](https://www.youtube.com/watch?v=zuyOdaQ2xuw) by Steven Gong in July 2023, taking part in the [F1 tenth](https://f1tenth.org/) race 2023, but they use Jetson Xavier NX from 2020, at least 3x more powerful than the Nano (Volta instead of Maxwell, 21 TOPS since int8 is supported) and with $399 4x more expensive
 - [Sorry. Your Car Will Never Drive You Around.](https://www.youtube.com/watch?v=2DOd4RLNeT4) - from January 2024, self driving cars are 8 times __less__ safe than humans, see data at minute 15 and 11.3 deaths per 100 million miles for Tesla FSD versus 1.35 deaths for humans
 - [Video First AI powered Race - A2RL Abu Dhabi](https://www.youtube.com/watch?v=feTxamTHQAA) - disaster 2024-04-28 [https://a2rl.io/](https://a2rl.io/)
