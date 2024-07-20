@@ -36,9 +36,13 @@ Note that to install the Nvidia CUDA driver for tensorflow you need at least a C
 
 ## Setup
 
-Idea from planning in India end of 2019 included a 7 inch 1024x600 IPS HDMI display, connected to the Jetson Nano and powered by a 10000 mAh battery pack with two 5V 2A outlets. The wireless network had to be added and now the Jetson is equipped with a AC8265 card for WiFi5 and Bluetooth 4.2. Once working the display is probably not needed but via VNC better controlled from a laptop or bigger screen. Insight from July 2024.
+The planning took place in India at the end of 2019. It includes 7 inch 1024x600 IPS HDMI display, connected to the Jetson Nano and powered by a 10000 mAh battery pack with two 5V 2A outlets. The wireless network had to be added and now the Jetson is equipped with a AC8265 card for WiFi5 and Bluetooth 4.2. The idea with a display originates from several other examples that used a display:
 
-More to come 2024-07-09
+![prototype car Jetson Nano](pic/prototype2022.jpg)
+
+Once the Jetson Nano is up and running the display is probably not nesessary. All connections are wireless and control can be done by ssh or vnc. A [video from 2019 by ExplainingComputers](https://www.youtube.com/watch?v=wKMWjIKaU68) shows this be done from a Jupyter Notebook. The Jetbot looks nice, yet someone had to build it and program it. This saves a lot of time, and still it was rather limited. The "edge detection" for the table top shows how limited the algorithms were at that time. Projected cost: $250.
+
+Two years later a more [complete set with LIDAR](https://www.hiwonder.com/products/jetauto?variant=39962923860055) is more than $600. And it states some "runs on ROS" but I doubt that the robot operating system ROS or ROS2 runs on the Jetson Nano. At least the hardware part of the build is simplified.
 
 ## History
 
@@ -66,7 +70,7 @@ The drive base from TAE was delayed early 2020 because of the starting COVID-19 
 
 ![Jetson and car](pic/2019_jetson_car.jpg)
 
-The project stalled from 2020-2024. And a lot happened in the meantime. I got to know the VEX competition and went to the finals in summer 2023 in Dallas. I got to know about VRC and reactivated the robot from [Team 426]() and mount a chair on it for [Reset 2023](https://github.com/ssis-robotics/reset23) exhibition.
+The project stalled from 2020-2024. And a lot happened in the meantime. I got to know the VEX competition and went to the finals in summer 2023 in Dallas. I got to know about VRC and reactivated the robot from [Team 426](https://github.com/ssis-robotics/reactivate23) and mount a chair on it for [Reset 2023](https://github.com/ssis-robotics/reset23) exhibition.
 
 ### Challenges of self driving - 2024
 
@@ -83,7 +87,7 @@ In early 2024 I finished assembling the Jetson Nano into the enclosure I purchas
 
 ![Jetson Nano 2024](pic/2024_jetson_nano.jpg)
 
-Another problem is that updating the software causes incompatibility for the gcc compiler with many errors throwing at you.
+Another problem is that updating the software causes incompatibility for the gcc compiler with many errors throwing at you. It's currently best to stick to Ubuntu 18.04 LTS.
 
 #### TODO
 
